@@ -1,4 +1,5 @@
 using MSharp;
+using UI.Pages;
 
 namespace Modules
 {
@@ -21,6 +22,10 @@ namespace Modules
                      x.CSharp("await OAuth.Instance.LogOff();");
                      x.Go<LoginPage>();
                  });
+
+            Item("Contacts")
+                .Icon(FA.Cog)
+                .OnClick(x => x.Go<ContactPage>());
         }
     }
 }

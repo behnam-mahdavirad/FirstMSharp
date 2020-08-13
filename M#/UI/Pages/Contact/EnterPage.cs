@@ -5,13 +5,13 @@ using System.Text;
 
 namespace UI.Pages.Contact
 {
-    public class ContactsPage : SubPage<ContactPage>
+    public class EnterPage : SubPage<ContactsPage>
     {
-        public ContactsPage()
+        public EnterPage()
         {
             Layout(Layouts.AdminDefault);
 
-            Add<Modules.ContactsList>();
+            Add<Modules.ContactForm>();
         }
     }
 }
