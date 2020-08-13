@@ -54,5 +54,28 @@ namespace Domain
                 Salt = pass.Salt
             });
         }
+
+        async Task CreateCategory()
+        {
+            await Create(new Category
+            {
+                Name = "Family"
+            });
+
+            await Create(new Category
+            {
+                Name = "Friends"
+            });
+
+            await Create(new Category
+            {
+                Name = "Business"
+            });
+
+            await Create(new Category
+            {
+                Name = "Other"
+            });
+        }
     }
 }
