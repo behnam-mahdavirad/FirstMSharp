@@ -1,4 +1,5 @@
 using MSharp;
+using UI.Pages;
 
 namespace Modules
 {
@@ -22,6 +23,9 @@ namespace Modules
 
             Item("Content blocks")
                 .OnClick(x => x.Go<Admin.Settings.ContentBlocksPage>());
+
+            Item("Contacts").Icon(FA.Cog)
+                .OnClick(x => x.Go<ContactPage>());
         }
     }
 }

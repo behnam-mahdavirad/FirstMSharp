@@ -24,13 +24,14 @@ namespace Modules
 
             // ================ Columns: ================
 
-            /*M#:w[26]T-Prop:SortingStatement-Type:ListButton-Sorting statement is assumed to be this anyway. No need to hard-code.*//*M#:w[26]T-Prop:Name-Type:ListButton-Button name should not contain underline.*/LinkColumn(x => x.Name)
-                .OnClick(x =>
-                {
-                    x.Go<Admin.Settings.Administrators.ViewPage>()
-                    .SendReturnUrl()
-                    .Send("item", "item.ID");
-                });
+            /*M#:w[26]T-Prop:SortingStatement-Type:ListButton-Sorting statement is assumed to be this anyway. No need to hard-code.*/
+            LinkColumn(x => x.Name)
+.OnClick(x =>
+{
+    x.Go<Admin.Settings.Administrators.ViewPage>()
+    .SendReturnUrl()
+    .Send("item", "item.ID");
+});
 
             Column(x => x.Email);
 

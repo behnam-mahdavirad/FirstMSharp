@@ -23,6 +23,7 @@ namespace Domain
 
             await CreateContentBlocks();
             await CreateAdmin();
+            await CreateCategory();
         }
 
         async Task CreateContentBlocks()

@@ -49,8 +49,8 @@
 
         #region Show error screen even in production?
         // Uncomment the following:
-        // protected override void ConfigureExceptionPage(IApplicationBuilder app) 
-        //    => app.UseDeveloperExceptionPage();
+        protected override void ConfigureExceptionPage(IApplicationBuilder app)
+           => app.UseDeveloperExceptionPage();
         #endregion
     }
 }
