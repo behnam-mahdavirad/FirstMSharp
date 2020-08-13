@@ -2,7 +2,7 @@
 
 namespace Domain
 {
-    class CarModel : EntityType
+    public class CarModel : EntityType
     {
         public CarModel()
         {

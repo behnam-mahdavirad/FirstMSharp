@@ -1,7 +1,4 @@
 ﻿using MSharp;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace UI.Pages
 {
@@ -11,7 +8,7 @@ namespace UI.Pages
         {
             Add<Modules.AdminSettingsMenu>();
 
-            OnStart(x => x.Go<Manufacturer.Manufacturers>().RunServerSide());
+            OnStart(x => x.Go<Manufacturer.ManufacturersPage>().RunServerSide());
         }
     }
 }

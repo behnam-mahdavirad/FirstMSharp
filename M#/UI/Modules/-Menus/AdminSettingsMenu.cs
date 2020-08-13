@@ -1,7 +1,9 @@
 using MSharp;
 using UI.Pages;
+using UI.Pages.CarModel;
 using UI.Pages.Country;
 using UI.Pages.Customer;
+using UI.Pages.Manufacturer;
 
 namespace Modules
 {
@@ -36,6 +38,22 @@ namespace Modules
             Item("Customers")
                 .Icon(FA.Cog)
                 .OnClick(x => x.Go<CustomersPage>());
+
+            Item("Manufacturers")
+                .Icon(FA.Car)
+                .OnClick(x => x.Go<ManufacturerPage>());
+
+            Item("Car models")
+                .Icon(FA.Car)
+                .OnClick(x => x.Go<CarModelPage>());
+
+            Item("Projects")
+                .Icon(FA.Cog)
+                .OnClick(x => x.Go<ProjectPage>());
+
+            Item("Project Tasks")
+                .Icon(FA.Cog)
+                .OnClick(x => x.Go<ProjectTaskPage>());
         }
     }
 }

@@ -1,7 +1,4 @@
-﻿using MSharp;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using MSharp;
 
 namespace UI.Pages
 {
@@ -10,8 +7,9 @@ namespace UI.Pages
         public CarModelPage()
         {
             Add<Modules.AdminSettingsMenu>();
+            Add<Modules.MainMenu>();
 
-
+            OnStart(x => x.Go<CarModel.CarModelsPage>().RunServerSide());
         }
     }
 }

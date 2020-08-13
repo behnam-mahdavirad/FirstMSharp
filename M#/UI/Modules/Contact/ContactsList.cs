@@ -16,7 +16,7 @@ namespace Modules
 
             Column(x => x.Email);
 
-            ButtonColumn("Edit").HeaderText("Actions").GridColumnCssClass("actions").GridColumnCssClass("actions").Icon(FA.Edit)
+            ButtonColumn("Edit").HeaderText("Actions").GridColumnCssClass("actions").Icon(FA.Edit)
                 /*M#:w[19]T-Prop:SendReturnUrl-Type:NavigateActivity-The destination page uses ReturnUrl which is not provided.*/.OnClick(x => x.Go<UI.Pages.Contact.EnterPage>()
                 .Send("item", "item.ID").SendReturnUrl(false));
 
