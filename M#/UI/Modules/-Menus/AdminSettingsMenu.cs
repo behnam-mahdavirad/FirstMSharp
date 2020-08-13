@@ -1,5 +1,7 @@
 using MSharp;
 using UI.Pages;
+using UI.Pages.Country;
+using UI.Pages.Customer;
 
 namespace Modules
 {
@@ -26,6 +28,14 @@ namespace Modules
 
             Item("Contacts").Icon(FA.Cog)
                 .OnClick(x => x.Go<ContactPage>());
+
+            Item("Countries")
+                .Icon(FA.Cog)
+                .OnClick(x => x.Go<CountriesPage>());
+
+            Item("Customers")
+                .Icon(FA.Cog)
+                .OnClick(x => x.Go<CustomersPage>());
         }
     }
 }

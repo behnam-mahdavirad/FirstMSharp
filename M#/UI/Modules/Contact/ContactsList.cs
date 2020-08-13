@@ -17,7 +17,7 @@ namespace Modules
             Column(x => x.Email);
 
             ButtonColumn("Edit").HeaderText("Actions").GridColumnCssClass("actions").GridColumnCssClass("actions").Icon(FA.Edit)
-                /*M#:w[20]T-Prop:SendReturnUrl-Type:NavigateActivity-The destination page uses ReturnUrl which is not provided.*/.OnClick(x => x.Go<UI.Pages.Contact.EnterPage>()
+                /*M#:w[19]T-Prop:SendReturnUrl-Type:NavigateActivity-The destination page uses ReturnUrl which is not provided.*/.OnClick(x => x.Go<UI.Pages.Contact.EnterPage>()
                 .Send("item", "item.ID").SendReturnUrl(false));
 
             ButtonColumn("Delete").HeaderText("Actions")
@@ -33,7 +33,7 @@ namespace Modules
 
             Button("Add Contact")
                 .Icon(FA.Plus)
-                /*M#:w[36]T-Prop:SendReturnUrl-Type:NavigateActivity-The destination page uses ReturnUrl which is not provided.*/.OnClick(x => x.Go<UI.Pages.Contact.EnterPage>().SendReturnUrl(false));
+                /*M#:w[35]T-Prop:SendReturnUrl-Type:NavigateActivity-The destination page uses ReturnUrl which is not provided.*/.OnClick(x => x.Go<UI.Pages.Contact.EnterPage>().SendReturnUrl(false));
         }
     }
 }

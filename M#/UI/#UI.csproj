@@ -15,6 +15,13 @@
     <ProjectReference Include="..\..\Domain\Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Modules\Manufacturer\" />
+    <Folder Include="Modules\CarModel\" />
+    <Folder Include="Pages\Manufacturer\" />
+    <Folder Include="Pages\CarModel\" />
+  </ItemGroup>
+
   <Target Name="Generate code" AfterTargets="AfterBuild">
     <Exec Condition="'$(MSHARP_BUILD)' != 'FULL'" WorkingDirectory="$(TargetDir)" Command="dotnet msharp.dsl.dll /build /ui /warn" />
   </Target>

@@ -8,8 +8,8 @@ namespace Modules
         {
             ShowHeaderRow().Sortable().HeaderText("Content Blocks");
 
-            /*M#:w[10]T-Prop:SortingStatement-Type:ListButton-Sorting statement is assumed to be this anyway. No need to hard-code.*/
-            LinkColumn(x => x.Key)
+            
+            /*M#:w[11]T-Prop:SortingStatement-Type:ListButton-Sorting statement is assumed to be this anyway. No need to hard-code.*//*M#:w[11]T-Prop:Name-Type:ListButton-Button name should not contain underline.*/LinkColumn(x => x.Key)
 .OnClick(x =>
 {
     x.Go<Admin.Settings.ContentBlocks.EnterPage>()
