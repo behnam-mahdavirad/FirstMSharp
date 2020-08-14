@@ -6,10 +6,9 @@ namespace Domain
     {
         public ProductCategory()
         {
-            // TODO: Configure me ...!
-            String("Property 1");
-            String("Property 2");
-            // ...
+            Name("Product Category");
+
+            String("Name").Mandatory();
         }
     }
 }
