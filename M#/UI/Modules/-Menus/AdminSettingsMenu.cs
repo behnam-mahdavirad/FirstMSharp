@@ -1,10 +1,7 @@
-using Microsoft.AspNetCore.Rewrite.Internal.UrlActions;
 using MSharp;
 using UI.Pages;
-using UI.Pages.CarModel;
 using UI.Pages.Country;
 using UI.Pages.Customer;
-using UI.Pages.Manufacturer;
 
 namespace Modules
 {
@@ -81,6 +78,19 @@ namespace Modules
             Item("Products")
                 .Icon(FA.Ad)
                 .OnClick(x => x.Go<ProductPage>());
+
+            // Example 05
+            Item("Vehicles")
+                .Icon(FA.Navicon)
+                .OnClick(x => x.Go<VehiclePage>());
+
+            Item("Bikes")
+                .Icon(FA.Navicon)
+                .OnClick(x => x.Go<BikePage>());
+
+            Item("Cars")
+                .Icon(FA.Navicon)
+                .OnClick(x => x.Go<CarPage>());
         }
     }
 }

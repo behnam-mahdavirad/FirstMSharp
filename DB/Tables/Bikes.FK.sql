@@ -1,0 +1,7 @@
+﻿ALTER TABLE Bikes ADD CONSTRAINT 
+[FK_Bike.Id->Vehicle] FOREIGN KEY (Id) 
+REFERENCES Vehicles (ID)
+ ON DELETE CASCADE;
+
+
+GO
