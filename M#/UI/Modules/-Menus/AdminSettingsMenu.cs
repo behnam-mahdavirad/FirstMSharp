@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Rewrite.Internal.UrlActions;
 using MSharp;
 using UI.Pages;
 using UI.Pages.CarModel;
@@ -54,6 +55,18 @@ namespace Modules
             Item("Project Tasks")
                 .Icon(FA.Cog)
                 .OnClick(x => x.Go<ProjectTaskPage>());
+
+            Item("Asset Types")
+                .Icon(FA.AccessibleIcon)
+                .OnClick(x => x.Go<AssetTypePage>());
+
+            Item("Owners")
+                .Icon(FA.AccessibleIcon)
+                .OnClick(x => x.Go<OwnerPage>());
+
+            Item("Assets List")
+                .Icon(FA.AccessibleIcon)
+                .OnClick(x => x.Go<AssetPage>());
         }
     }
 }
