@@ -1,11 +1,8 @@
 using MSharp;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace UI.Pages.CarModel
 {
-    public class EnterPage : SubPage<CarModelsPage>
+    public class EnterPage : SubPage<CarModelPage>
     {
         public EnterPage()
         {

@@ -6,23 +6,26 @@ namespace Modules
     {
         public ManufacturersList()
         {
+            HeaderText("Manufacturers");
+
             Column(x => x.Name);
 
-            ButtonColumn("Edit").HeaderText("Actions").GridColumnCssClass("actions").Icon(FA.Edit)
-                /*M#:w[11]T-Prop:Target-Type:NavigateActivity-Redirect from non-modal to modal with bad «target»: Page [Manufacturer > Manufacturers] -> Module [ManufacturersList] -> [[ManufacturersList].Edit] -> Target page : [Manufacturer > Manufacturers > Enter]*/.OnClick(x => x.Go<UI.Pages.Manufacturer.EnterPage>()
+            ButtonColumn("Edit").HeaderText("Edit").GridColumnCssClass("actions").Icon(FA.Edit)
+                /*M#:w[13]T-Prop:SendReturnUrl-Type:NavigateActivity-The destination page uses ReturnUrl which is not provided.*/.OnClick(x => x.Go<UI.Pages.Manufacturer.EditPage>()
                 .Send("item", "item.ID").SendReturnUrl(false));
 
-            ButtonColumn("Delete").HeaderText("Actions").GridColumnCssClass("actions").Icon(FA.Remove)
+            ButtonColumn("Delete").HeaderText("Delete").GridColumnCssClass("actions").Icon(FA.Remove)
                 .ConfirmQuestion("Are you sure you want to delete this manufacturer?")
                 .CssClass("btn-danger")
                 .OnClick(x =>
                 {
                     x.DeleteItem();
-                    x.RefreshPage();
+                    x.Reload();
                 });
 
-            Button("New Manufacturer")
-                .OnClick(x => x.PopUp<UI.Pages.Manufacturer.EnterPage>());
+            Button("Add Manufacturer")
+                .OnClick(x => x.PopUp<UI.Pages.Manufacturer.EnterPage>()
+                .SendReturnUrl(false));
         }
     }
 }

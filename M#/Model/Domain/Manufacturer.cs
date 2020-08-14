@@ -6,7 +6,9 @@ namespace Domain
     {
         public Manufacturer()
         {
-            String("Name").Mandatory(value: true).Unique(value: true);
+            String("Name").Mandatory(value: true);
+
+            UniqueCombination(new[] { "Name" });
         }
     }
 }

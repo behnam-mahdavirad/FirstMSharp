@@ -6,10 +6,7 @@ namespace UI.Pages
     {
         public CarModelPage()
         {
-            Add<Modules.AdminSettingsMenu>();
-            Add<Modules.MainMenu>();
-
-            OnStart(x => x.Go<CarModel.CarModelsPage>().RunServerSide());
+            Add<Modules.CarModelsList>();
         }
     }
 }

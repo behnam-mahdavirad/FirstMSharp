@@ -1,17 +1,14 @@
 ﻿using MSharp;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace UI.Pages.Manufacturer
 {
-    public class EnterPage : SubPage<ManufacturersPage>
+    public class EnterPage : SubPage<ManufacturerPage>
     {
         public EnterPage()
         {
             Layout(Layouts.AdminDefaultModal);
 
-            Add<Modules.ManufacturerForm>();
+            Add<Modules.ManufacturerAdd>();
         }
     }
 }

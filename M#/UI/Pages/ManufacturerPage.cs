@@ -6,9 +6,7 @@ namespace UI.Pages
     {
         public ManufacturerPage()
         {
-            Add<Modules.AdminSettingsMenu>();
-
-            OnStart(x => x.Go<Manufacturer.ManufacturersPage>().RunServerSide());
+            Add<Modules.ManufacturersList>();
         }
     }
 }
