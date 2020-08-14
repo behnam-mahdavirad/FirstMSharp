@@ -10,7 +10,7 @@ namespace Domain
 
             Associate<ProductCategory>("Category").Mandatory();
 
-            Associate<Supplier>("Suuplier").Mandatory();
+            Associate<Supplier>("Supplier").Mandatory();
         }
     }
 }

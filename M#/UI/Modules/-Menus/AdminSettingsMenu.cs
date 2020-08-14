@@ -56,6 +56,7 @@ namespace Modules
                 .Icon(FA.Cog)
                 .OnClick(x => x.Go<ProjectTaskPage>());
 
+            // Example 04
             Item("Asset Types")
                 .Icon(FA.AccessibleIcon)
                 .OnClick(x => x.Go<AssetTypePage>());
@@ -67,6 +68,19 @@ namespace Modules
             Item("Assets List")
                 .Icon(FA.AccessibleIcon)
                 .OnClick(x => x.Go<AssetPage>());
+
+            // Practice 04
+            Item("Product categories")
+                .Icon(FA.Ad)
+                .OnClick(x => x.Go<ProductCategoryPage>());
+
+            Item("Suppliers")
+                .Icon(FA.Ad)
+                .OnClick(x => x.Go<SupplierPage>());
+
+            Item("Products")
+                .Icon(FA.Ad)
+                .OnClick(x => x.Go<ProductPage>());
         }
     }
 }
